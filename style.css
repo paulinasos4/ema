@@ -55,6 +55,10 @@ nav a:hover{
   align-items: center;
   padding: 4rem 0;
     width: 100%;
+  .hero img{
+  width:100%;
+  max-width:420px;
+}
 
   /* fondo con imagen + overlay para que se lea el texto */
   background-image:
@@ -67,6 +71,7 @@ nav a:hover{
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+
 }
 
 /* contenedor del texto del hero */
@@ -113,11 +118,6 @@ nav a:hover{
   background:#000000;
 }
 
-.hero img{
-  width:100%;
-  max-width:420px;
-  margin:auto;
-}
 
 /* SECTIONS */
 section{
@@ -217,6 +217,8 @@ section{
   text-align:center;
   background:#fff7ed;
   padding:70px 20px;
+    width:100vw;
+  margin-left:calc(-50vw + 50%);
 }
 
 .whatsapp{
@@ -229,6 +231,8 @@ footer{
   background:#1f2937;
   color:#ccc;
   padding:50px 8%;
+    width:100vw;
+  margin-left:calc(-50vw + 50%);
 }
 
 .footer-grid{
