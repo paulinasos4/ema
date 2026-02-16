@@ -361,18 +361,47 @@ footer a:hover{
 }
 
 }
-@media (max-width: 600px){
-  .hero-text h1{
-    font-size: 26px;
-  }
-
-  .hero-text p{
-    font-size: 15px;
-    padding: 0 10px;
-  }
-
-  .btn{
-    padding: 12px 22px;
-    border-radius: 30px;
-  }
+/* BOTON HAMBURGUESA */
+.menu-toggle{
+  display:none;
+  font-size:28px;
+  color:#FFF8DC;
+  cursor:pointer;
 }
+
+/* MOBILE */
+@media (max-width: 768px){
+
+  header{
+    flex-direction: row;
+    justify-content: space-between;
+    padding:16px 20px;
+  }
+
+  .menu-toggle{
+    display:block;
+  }
+
+  nav{
+    position:absolute;
+    top:70px;
+    left:0;
+    width:100%;
+    background:#823720;
+    display:none;
+    flex-direction:column;
+    text-align:center;
+    padding:20px 0;
+  }
+
+  nav a{
+    margin:10px 0;
+    font-size:18px;
+  }
+
+  nav.active{
+    display:flex;
+  }
+
+}
+
