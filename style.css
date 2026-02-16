@@ -361,3 +361,18 @@ footer a:hover{
 }
 
 }
+@media (max-width: 600px){
+  .hero-text h1{
+    font-size: 26px;
+  }
+
+  .hero-text p{
+    font-size: 15px;
+    padding: 0 10px;
+  }
+
+  .btn{
+    padding: 12px 22px;
+    border-radius: 30px;
+  }
+}
