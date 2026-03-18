@@ -5,26 +5,34 @@
   font-family:"Poppins", sans-serif;
 }
 
+/* Mismo tono que el footer: evita franja blanca abajo al hacer scroll / overscroll */
+html{
+  background:#1f2937;
+}
+
 body{
   background:#fff;
   color:#222;
   line-height:1.6;
+  margin:0;
 }
 
-/* HEADER */
+/* HEADER — menú centrado, logo a la izquierda */
 header{
   width:100%;
-  padding:20px 8%;
+  min-height:76px;
+  padding:22px 8%;
   display:flex;
-  justify-content:space-between;
+  justify-content:center;
   align-items:center;
   background:#823720;
   position:sticky;
   top:0;
   z-index:10;
+  box-shadow:0 4px 20px rgba(0,0,0,.18);
 }
 .logo img{
-  height: 30px;
+  height:46px;
   width:auto;
   display:block;
 }
@@ -34,12 +42,27 @@ header{
   font-size:24px;
   font-weight:700;
   color:#ff7a2f;
+  position:absolute;
+  left:8%;
+  top:50%;
+  transform:translateY(-50%);
+}
+
+nav{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+  gap:10px 36px;
 }
 nav a{
-  margin-left:20px;
+  margin-left:0;
   text-decoration:none;
   color:#FFF8DC;
-  font-weight:500;
+  font-weight:600;
+  font-size:1.05rem;
+  letter-spacing:0.02em;
+  padding:8px 4px;
 }
 
 nav a:hover{
@@ -207,9 +230,10 @@ section{
 footer{
   background:#1f2937;
   color:#ccc;
-  padding:50px 8%;
-    width:100vw;
+  padding:50px 8% max(50px, env(safe-area-inset-bottom, 0px));
+  width:100vw;
   margin-left:calc(-50vw + 50%);
+  box-sizing:border-box;
 }
 
 .footer-grid{
@@ -237,8 +261,11 @@ footer a:hover{
 .copy{
   text-align:center;
   margin-top:30px;
+  margin-bottom:0;
+  padding-bottom:0;
   font-size:14px;
-  color:#777;
+  color:#9ca3af;
+  border:none;
 }
 
 /* RESPONSIVE */
@@ -364,9 +391,15 @@ footer a:hover{
 /* BOTON HAMBURGUESA */
 .menu-toggle{
   display:none;
-  font-size:28px;
+  font-size:34px;
+  line-height:1;
   color:#FFF8DC;
   cursor:pointer;
+  position:absolute;
+  right:8%;
+  top:50%;
+  transform:translateY(-50%);
+  z-index:11;
 }
 
 /* MOBILE */
@@ -375,28 +408,44 @@ footer a:hover{
   header{
     flex-direction: row;
     justify-content: space-between;
-    padding:16px 20px;
+    min-height:70px;
+    padding:20px 22px;
+  }
+
+  .logo{
+    position:static;
+    transform:none;
   }
 
   .menu-toggle{
     display:block;
+    position:static;
+    transform:none;
   }
 
   nav{
     position:absolute;
-    top:70px;
+    top:100%;
     left:0;
     width:100%;
     background:#823720;
     display:none;
     flex-direction:column;
+    flex-wrap:nowrap;
+    gap:0;
     text-align:center;
-    padding:20px 0;
+    padding:28px 0 32px;
+    box-shadow:0 12px 24px rgba(0,0,0,.2);
   }
 
   nav a{
-    margin:10px 0;
-    font-size:18px;
+    margin:14px 0;
+    font-size:1.15rem;
+    padding:10px 16px;
+  }
+
+  .logo img{
+    height:40px;
   }
 
   nav.active{
